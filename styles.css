@@ -227,14 +227,13 @@ footer {
   border-radius: 15px;
 }
 
-
 .game_card img:hover {
   cursor: pointer;
   transform: scale(0.97);
   transition: transform 0.3s ease;
 }
 
-/* Responsive Design */
+/* Responsive media queries */
 @media (max-width: 1200px) {
   .container {
     margin-left: 10px;
@@ -259,8 +258,8 @@ footer {
   }
 
   .game_card img {
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -283,7 +282,7 @@ footer {
   }
 
   .game_card {
-    width: 90%;
+    width: 100%;
   }
 
   .game_card img {
@@ -317,4 +316,3 @@ footer {
     font-size: 0.8rem;
   }
 }
-
