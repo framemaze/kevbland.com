@@ -1,0 +1,51 @@
+/* rubik google font */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* add red border to DIVs so it's more obvious where they are  }
+div, section, header, footer, main{
+    border: solid 1px red;
+    margin: 5px;
+}*/
+
+*{
+    margin: 0 auto;
+    padding: 0px;
+    width: 100%;
+    font-family: "Rubik", sans-serif;
+}
+
+.hero{
+    position: relative;
+    background-image: url(img/image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.hero-content {
+    text-align: center;
+    position: absolute;
+    top: 20%;
+    font-size: 30px;
+    background-color: #1a1a1a;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    opacity: 0.8;
+}
+
+.hero-content h1, p{
+    color: whitesmoke;
+}
+
+/* ###################################################### */
+/* media queries for responsiveness */
+
+/* if the viewport width <600px then makes a one column layout instead of a two-column layout  */
+@media (max-width: 700px){
+    .hero-content h1, p{
+        font-size: 30px;
+    }
+
+}
