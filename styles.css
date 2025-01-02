@@ -1,8 +1,11 @@
 /*###################################################################*/
 /* Fonts and defaults */
 /* Merriweather */
+/* font-family: "Merriweather", serif; */
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
+
+/* font-family: "Lato", serif; */
 /* Lato */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
@@ -28,7 +31,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Lato", serif;
-    /* font-family: "Merriweather", serif; */
     text-decoration: none;
 }
 
@@ -78,16 +80,18 @@ html{
     font-weight: 800;
     padding-bottom: 0.8rem;
     color: #141414;
+    font-family: "Merriweather", serif;
 }
 
 .hero-content h2{
     font-size: 1.6rem;
     padding-bottom: 0.8rem;
-    color: #141414;
+    color: #333333;
+    font-family: "Merriweather", serif;
 }
 
 .hero-content-line{
-    width: 50dvw;
+    width: 40dvw;
     margin: 0 auto;
     border: 1px solid rgb(20,33,61,0.70);
     margin-top: 3rem;
@@ -219,11 +223,15 @@ footer{
     }
   
     .hero h1, a {
-        font-size: 3rem;
+        font-size: 2.4rem;
     }
   
     .hero h2{
-      font-size: 2.2rem;
+      font-size: 1.4rem;
+  }
+
+  .hero-content-line{
+    width: 60dvw;
   }
   
   .card{
