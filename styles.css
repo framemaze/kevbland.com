@@ -89,13 +89,13 @@ html{
 .hero-content-line{
     width: 50dvw;
     margin: 0 auto;
-    border: 1px solid #14213d;
+    border: 1px solid rgb(20,33,61,0.70);
     margin-top: 3rem;
     margin-bottom: 3rem;
 }
 
 .hero button{
-    background: #14213d;
+    background: rgb(20,33,61);
     color: #FFFFFF;
     border: none;
     padding: 1rem 1.8rem;
@@ -106,7 +106,7 @@ html{
   }
   
   .hero button:hover{
-    background: #fca311;
+    background: rgb(20,33,61,0.70);
     /* the 0.70 is the opacity */
     color: #FFFFFF;
   }
