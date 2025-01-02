@@ -66,7 +66,7 @@ html{
     text-align: center;
     margin: 0 auto;
     width:100%;
-    background-color: #f7f7f7;
+    background-color: #FFFFFF;
     margin-top: 30dvh;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -76,7 +76,7 @@ html{
 .hero-content h1, a{
     text-decoration: none;
     font-size: 5rem;
-    font-weight: 800;
+    font-weight: 700;
     color: #141414;
     font-family: "Merriweather", serif;
 }
@@ -84,7 +84,8 @@ html{
 .hero-content h2{
     font-size: 1.6rem;
     color: #141414;
-    font-family: "Merriweather", serif;
+    font-weight: 300;
+    /* font-family: "Merriweather", serif; */
 }
 
 .hero-button{
@@ -131,6 +132,12 @@ html{
 #season2425 h1{
     font-size: 1.8rem;
     font-weight: 600;
+    padding-bottom: 1rem;
+}
+
+#season2425 p{
+    font-size: 1rem;
+    padding-bottom: 1rem;  
 }
 
 /*###################################################################*/
