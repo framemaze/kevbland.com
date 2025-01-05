@@ -88,6 +88,11 @@ html{
     /* font-family: "Merriweather", serif; */
 }
 
+.hero-content-image{
+    width: 100px;
+    height: 100px;
+}
+
 .hero-button{
     margin: 0 auto;
     display: block;
@@ -141,14 +146,6 @@ html{
 }
 
 /*###################################################################*/
-/* season-line */
-.season-line{
-  /* width: 100%; */
-  border: 1px solid #FCA311;
-  margin-bottom: 3rem;
-}
-
-/*###################################################################*/
 /* grid-main */
 .main-grid{
     display: grid;
@@ -158,7 +155,7 @@ html{
     padding-left: 5dvw;
     padding-right: 5dvw;
     padding-bottom: 8rem;
-    padding-top: 2rem;
+    padding-top: 1rem;
 }
 
 /* Styling for the link wrapping each card */
@@ -176,6 +173,7 @@ html{
   padding: 1.2rem;
   font-size: 1rem;  
   cursor: pointer;
+  background: #F5F5F5;
 }
 
 .main-item:hover{
@@ -193,15 +191,26 @@ html{
   color: #FFFFFF;
 }
 
+.main-item:hover p{
+    color: #FFFFFF;
+  }
+
 .main-item h2{
     font-size: 1.8rem;
     font-weight: 600;
-    padding-bottom: 2rem;
+    /* padding-bottom: 2rem; */
     color: #141414;
   }
 
+.main-item p{
+    font-size: 0.8rem;
+    padding-bottom: 0.4rem;
+    font-weight: 300;
+    color: #545454;
+}
+
 .main-item:hover h2{
-  color: #FCA311
+  color: #FCA311;
 }
 
 .main-item-line{
@@ -242,7 +251,6 @@ footer{
       font-size: 1.4rem;
     }
 
-
     .hero button{
     font-size: 0.9rem;
     }
@@ -270,8 +278,7 @@ footer{
         padding-left: 5vw;
         padding-right: 5vw;
         grid-auto-rows: minmax(150px, auto); /* Rows will be at least 150px in height, but expand if content overflows */
-
-        gap: 0.1rem; /* Reduced spacing between items */
+        gap: 2rem;
     }
   
     .main-item {
