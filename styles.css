@@ -14,15 +14,6 @@
   margin: 2px;
 } */
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* ACTIONS
-
-~ find a smart way of including home or away - maybe use a nested grid???
-~ can I add the logos from each club on the cards?
-~ media queries
-
-*/
-
 /*###################################################################*/
 /* defaults and resets */
 *{
@@ -173,7 +164,6 @@ html{
   padding: 1.2rem;
   font-size: 1rem;  
   cursor: pointer;
-  background: #F5F5F5;
 }
 
 .main-item:hover{
