@@ -7,9 +7,8 @@
 /* Merriweather */
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
-
 /* this code helps see the outline of DIVs to see what's going on */
-/* div, section, header, footer{
+/* div, section, nav, header, footer{
   border: solid 1px red;
   margin: 2px;
 } */
@@ -39,6 +38,84 @@ html{
  }
 
 /*###################################################################*/
+/* nav */
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    padding-left: 8dvw;
+    padding-right: 8dvw;
+}
+
+.nav-left{
+    /* display: flex; */
+    width: 45%;
+    align-items: flex-start; /* moves the text to the top of the div */
+}
+
+.nav-right{
+    display: flex;
+    justify-content: flex-end; /* this right aligns the text */
+    width:55%;
+    font-size: 1rem;
+    margin-left: auto;
+    align-items: flex-start; /* moves the text to the top of the div */
+}
+
+.nav-left a{
+    list-style: none;
+    text-decoration: none;
+    color: #000000;
+    /* transition: all 200ms ease-in; */
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: "Merriweather", serif;
+}
+
+.nav-left p{
+    list-style: none;
+    text-decoration: none;
+    color: #545454;
+    font-size: 1.2rem;
+    font-weight: 300;
+    font-family: "Merriweather", serif;
+    /* padding-left: 8px; */
+}
+
+.nav-list {
+    display: flex;
+    gap: 1.2rem;
+  }
+
+.nav-item {
+    list-style: none;
+    margin-right: 2rem;
+}
+
+.nav-item a {
+    text-decoration: none;
+    font-weight: 400;
+    color: #141414;
+    /* make the link look like a button */
+    /* padding-left: 1.4rem;
+    padding-right: 1.4rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    background-color: #14213d;
+    border: 1px solid #14213d;
+    border-radius: 2rem; */
+    /* transition: all 200ms ease-in; */
+}
+
+.nav-item a:hover{
+    padding-bottom: 2px;
+    border-bottom: 3px solid #545454;
+    color: #545454;
+}
+
+/*###################################################################*/
 /* hero */
 .hero{
     position: relative;
@@ -48,96 +125,92 @@ html{
     background-position: center;
     width: 100%;
     height: 100dvh;
-    /* the code below make sure the text is vertically aligned in the hero DIV */
-    display: block;
-    align-items: center;
-}
-
-.hero-content{
-    text-align: center;
-    margin: 0 auto;
-    width:100%;
-    background-color: #FFFFFF;
-    margin-top: 30dvh;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    opacity: 0.50;
-}
-
-.hero-content h1, a{
-    text-decoration: none;
-    font-size: 5rem;
-    font-weight: 700;
-    color: #141414;
-    font-family: "Merriweather", serif;
-}
-
-.hero-content h2{
-    font-size: 1.6rem;
-    color: #141414;
-    font-weight: 300;
-}
-
-.hero-content-image{
-    width: 100px;
-    height: 100px;
-}
-
-.hero-button{
-    margin: 0 auto;
-    display: block;
-    padding-top: 3rem;
-}
-
-.hero button{
-    background: rgb(20,33,61);
-    color: #FFFFFF;
-    border: none;
-    padding: 1rem 1.8rem;
-    margin-top: 1.2rem;
-    border-radius: 2rem;
-    font-size: 1rem;
-    cursor: pointer;
-    margin: 0 auto;
-    display: block;
-  }
-  
-  .hero button:hover{
-    background: rgb(20,33,61,0.70);
-    /* the 0.70 is the opacity */
-    color: #FFFFFF;
-  }
-
-
-/*###################################################################*/
-/* card */
-.card{
-    height: 100dvh;
 }
 
 /*###################################################################*/
-/* season2425 */
-#season2425{
-    padding-left: 10dvw;
-    padding-right: 10dvw; 
+/* junior-knights */
+#junior-knights{
+    padding-left: 8dvw;
+    padding-right: 8dvw;
     padding-bottom: 1rem;
     padding-top: 5dvh;
 }
 
-#season2425 h1{
-    font-size: 1.8rem;
+#junior-knights h1{
+    font-size: 1.6rem;
     font-weight: 600;
     padding-bottom: 1rem;
 }
 
-#season2425 p{
+#junior-knights p{
     font-size: 1rem;
-    padding-bottom: 1rem;  
+    padding-bottom: 1rem; 
+    color: #545454; 
 }
 
-#season2425 a{
+#junior-knights a{
     color:inherit;
 }
+
+/*###################################################################*/
+/* leeds-roses */
+#leeds-roses{
+    padding-left: 8dvw;
+    padding-right: 8dvw;
+    padding-bottom: 1rem;
+    padding-top: 5dvh;
+}
+
+#leeds-roses h1{
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
+}
+
+#leeds-roses p{
+    font-size: 1rem;
+    padding-bottom: 1rem;
+    color: #545454;
+}
+
+#leeds-roses a{
+    color:inherit;
+}
+
+/*###################################################################*/
+/* leeds-knights */
+#leeds-knights{
+    padding-left: 8dvw;
+    padding-right: 8dvw;
+    padding-bottom: 1rem;
+    padding-top: 5dvh;
+}
+
+#leeds-knights h1{
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
+}
+
+#leeds-knights p{
+    font-size: 1rem;
+    padding-bottom: 1rem;
+    color: #545454;
+}
+
+#leeds-knights a{
+    color:inherit;
+}
+
+/*###################################################################*/
+/* Line divider between sections */
+.section-line{
+    padding-left: 8dvw;
+    padding-right: 8dvw;
+    margin: 0 auto;
+    border: 1px solid #E5E5E5;
+    margin-bottom: 1rem;
+  }
 
 /*###################################################################*/
 /* grid-main */
@@ -146,9 +219,9 @@ html{
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-auto-rows: minmax(300px, auto); /* Rows will be at least 300px in height, but expand if content overflows */
     gap: 2rem;
-    padding-left: 5dvw;
-    padding-right: 5dvw;
-    padding-bottom: 8rem;
+    padding-left: 8dvw;
+    padding-right: 8dvw;
+    padding-bottom: 2rem;
     padding-top: 1rem;
 }
 
@@ -161,11 +234,11 @@ html{
 
 /* Styling for the individual cards */
 .main-item {
-  /* min-height: 250px; */
+  min-height: 250px;
   border-radius: 0.8rem;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
   padding: 1.2rem;
-  font-size: 1rem;  
+  font-size: 1rem; 
   cursor: pointer;
 }
 
@@ -212,177 +285,3 @@ html{
   margin-bottom: 3rem;
 }
 
-/*###################################################################*/
-/* footer */
-footer{
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    text-align: center;
-    font-size: 1rem;
-    color:#999999;
-    position: absolute; /* add position: relative to the body tag so the footer stays at the bottom */
-    overflow: auto;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    margin-top:auto;
-}
-
-/*###################################################################*/
-/* Media queries for responsiveness */
-/* smartphone */
-@media (max-width: 768px) {
-    .hero {
-        padding-top: 3vh;
-    }
-  
-    .hero h1, a {
-        font-size: 2.4rem;
-    }
-  
-    .hero h2{
-      font-size: 1.4rem;
-    }
-
-    .hero button{
-    font-size: 0.9rem;
-    }
-
-    .hero-content-line{
-    width: 60dvw;
-    }
-  
-    .card{
-    height: auto;
-    }
-  
-    .hero p {
-        font-size: 1rem;
-        padding-top: 2rem;
-        padding-bottom: 4rem;
-    }
-  
-    #season2425 h1 {
-        font-size: 1.2rem;
-    }
-  
-    .main-grid {
-        grid-template-columns: 1fr; /* Single column for smaller screens */
-        padding-left: 5vw;
-        padding-right: 5vw;
-        grid-auto-rows: minmax(150px, auto); /* Rows will be at least 150px in height, but expand if content overflows */
-        gap: 2rem;
-    }
-  
-    .main-item {
-        min-height: 200px;
-        font-size: 0.9rem;
-        padding: 1rem;
-    }
-  
-    .main-item h1 {
-        font-size: 0.9rem;
-    }
-  
-    .main-item h2 {
-        font-size: 1.4rem;
-    }
-  
-    footer {
-        font-size: 0.9rem;
-    }
-  }
-  
-  /* tablet */
-  @media (min-width: 769px) and (max-width: 1024px) {
-    .hero {
-        padding-top: 4vh;
-    }
-  
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-  
-    .hero-content p {
-        font-size: 1.1rem;
-        padding-top: 3rem;
-        padding-bottom: 5rem;
-    }
-  
-    #season2425 h1 {
-        font-size: 1.3rem;
-    }
-  
-    .main-grid {
-        grid-template-columns: 1fr 1fr; /* Two columns for medium screens */
-        padding-left: 8vw;
-        padding-right: 8vw;
-        gap: 1.5rem;
-    }
-  
-    .main-item {
-        min-height: 220px;
-        font-size: 1rem;
-        padding: 1.1rem;
-    }
-  
-    .main-item h1 {
-        font-size: 1rem;
-    }
-  
-    .main-item h2 {
-        font-size: 1.6rem;
-    }
-  
-    footer {
-        font-size: 1rem;
-    }
-  }
-  
-  /* desktops */
-  @media (min-width: 1025px) {
-    .hero {
-        padding-top: 5vh;
-    }
-  
-    .hero-content h1 {
-        font-size: 3rem;
-    }
-  
-    .hero-content p {
-        font-size: 1.2rem;
-        padding-top: 4rem;
-        padding-bottom: 6rem;
-    }
-  
-    #season2425 h1 {
-        font-size: 1.8rem;
-    }
-  
-    .main-grid {
-        grid-template-columns: 1fr 1fr 1fr 1fr; /* Three columns for large screens */
-        padding-left: 10dvw;
-        padding-right: 10dvw;
-        gap: 2rem;
-    }
-  
-    .main-item {
-        min-height: 250px;
-        width:100%;
-        font-size: 1rem;
-        padding: 1.2rem;
-    }
-  
-    .main-item h1 {
-        font-size: 1rem;
-    }
-  
-    .main-item h2 {
-        font-size: 1.8rem;
-    }
-  
-    footer {
-        font-size: 1rem;
-    }
-  }
-  
