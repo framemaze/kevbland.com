@@ -8,10 +8,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
 /* this code helps see the outline of DIVs to see what's going on */
-div, section, nav, header, footer{
+/* div, section, nav, header, footer{
   border: solid 1px red;
   margin: 2px;
-}
+} */
 
 /*###################################################################*/
 /* defaults and resets */
@@ -50,7 +50,6 @@ nav{
 }
 
 .nav-left{
-    /* display: flex; */
     width: 45%;
     align-items: flex-start; /* moves the text to the top of the div */
 }
@@ -69,7 +68,7 @@ nav{
     text-decoration: none;
     color: #000000;
     /* transition: all 200ms ease-in; */
-    font-size: 1.8rem;
+    font-size: 3rem;
     font-weight: 700;
     font-family: "Merriweather", serif;
 }
@@ -78,7 +77,7 @@ nav{
     list-style: none;
     text-decoration: none;
     color: #545454;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     font-weight: 300;
     font-family: "Merriweather", serif;
     /* padding-left: 8px; */
@@ -86,27 +85,19 @@ nav{
 
 .nav-list {
     display: flex;
-    gap: 1.2rem;
+    gap: 2rem;
   }
 
 .nav-item {
     list-style: none;
-    margin-right: 2rem;
+    /* margin-right: 2rem; */
 }
 
 .nav-item a {
     text-decoration: none;
     font-weight: 400;
     color: #141414;
-    /* make the link look like a button */
-    /* padding-left: 1.4rem;
-    padding-right: 1.4rem;
-    padding-top: 0.6rem;
-    padding-bottom: 0.6rem;
-    background-color: #14213d;
-    border: 1px solid #14213d;
-    border-radius: 2rem; */
-    /* transition: all 200ms ease-in; */
+    font-size: 1.4rem;;
 }
 
 .nav-item a:hover{
@@ -137,43 +128,18 @@ nav{
 }
 
 #junior-knights h1{
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 600;
     padding-bottom: 1rem;
 }
 
 #junior-knights p{
-    font-size: 1rem;
+    font-size: 1.4rem;
     padding-bottom: 1rem; 
     color: #545454; 
 }
 
 #junior-knights a{
-    color:inherit;
-}
-
-/*###################################################################*/
-/* leeds-roses */
-#leeds-roses{
-    padding-left: 8dvw;
-    padding-right: 8dvw;
-    padding-bottom: 1rem;
-    padding-top: 5dvh;
-}
-
-#leeds-roses h1{
-    font-size: 1.6rem;
-    font-weight: 600;
-    padding-bottom: 1rem;
-}
-
-#leeds-roses p{
-    font-size: 1rem;
-    padding-bottom: 1rem;
-    color: #545454;
-}
-
-#leeds-roses a{
     color:inherit;
 }
 
@@ -187,13 +153,13 @@ nav{
 }
 
 #leeds-knights h1{
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 600;
     padding-bottom: 1rem;
 }
 
 #leeds-knights p{
-    font-size: 1rem;
+    font-size: 1.4rem;
     padding-bottom: 1rem;
     color: #545454;
 }
@@ -247,7 +213,7 @@ nav{
 }
 
 .main-item h1{
-    font-size: 1rem;
+    font-size: 1.4rem;
     padding-bottom: 0.4rem;
     font-weight: 300;
     color: #545454;
@@ -262,14 +228,14 @@ nav{
   }
 
 .main-item h2{
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 600;
     /* padding-bottom: 2rem; */
     color: #141414;
   }
 
 .main-item p{
-    font-size: 0.8rem;
+    font-size: 1.4rem;
     padding-bottom: 0.4rem;
     font-weight: 300;
     color: #545454;
@@ -287,58 +253,154 @@ nav{
 
 /*###################################################################*/
 /* Media queries for responsiveness */
-/* Smartphone (up to 767px) */
-@media (max-width: 767px) {
+/* Smartphone (up to 768px) */
+@media (max-width: 768px) {
+    
+    
     nav {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .nav-left{
-        text-align: center;
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .nav-left{
+          text-align: center;
+      }
+
+      .nav-left a{
+        font-size: 1.6rem;
+      }
+
+      .nav-left p{
+        font-size: 1.2rem;
     }
 
+    .nav-item a{
+        font-size: 1rem;
+    
+    }
+  
     .nav-right {
         padding-top: 10px;
         margin: 0 auto;
         text-align: center;
-    }
-
-    .nav-right ul {
-      flex-direction: column;
-      text-align: center;
+        justify-content: center;
     }
   
-    .main-grid {
-      grid-template-columns: 1fr; /* Stack grid items on smaller screens */
+    .nav-right ul {
+    flex-direction: column;
+    text-align: center;
     }
+
   
     .hero {
-      height: 200px; /* Reduce hero section height */
+        padding-top: 3vh;
+        height: 200px; /* Reduce hero section height */
+      }
+
+    .card{
+    height: auto;
+    }
+    
+    #junior-knights h1 {
+        font-size: 1.2rem;
+    }
+
+    #junior-knights p{
+        font-size: 0.9rem;
+    }
+
+    #leeds-knights h1 {
+        font-size: 1.2rem;
+    }  
+  
+    #leeds-knights p{
+        font-size: 0.9rem;
+    }
+
+    .main-grid {
+        grid-template-columns: 1fr; /* Single column for smaller screens */
+        padding-left: 5vw;
+        padding-right: 5vw;
+        grid-auto-rows: minmax(150px, auto); /* Rows will be at least 150px in height, but expand if content overflows */
+        gap: 2rem;
     }
   
-    h1 {
-      font-size: 1.5rem;
+    .main-item {
+        min-height: 200px;
+        font-size: 0.9rem;
+        padding: 1rem;
     }
   
-    h2 {
-      font-size: 1.2rem;
+    .main-item h1 {
+        font-size: 0.9rem;
     }
   
-    p {
-      font-size: 0.9rem;
+    .main-item h2 {
+        font-size: 1.4rem;
+    }
+  
+    footer {
+        font-size: 0.9rem;
     }
   }
 
-  /* Tablet (768px - 1024px) */
-@media (max-width: 1024px) {
-    .nav-right ul {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+/* tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero {
+        padding-top: 4vh;
     }
-  
-    .main-grid {
-      grid-template-columns: repeat(2, 1fr); /* Adjust grid for tablets */
+
+
+    .nav-left a{
+      font-size: 1.6rem;
     }
+
+    .nav-left p{
+      font-size: 1.2rem;
   }
+
+  .nav-item a{
+      font-size: 1.1rem;
+  
+  }
+
+    #junior-knights h1 {
+        font-size: 1.4rem;
+    }
+
+    #junior-knights p {
+        font-size: 1rem;
+    }
+
+    #leeds-knights h1 {
+        font-size: 1.4rem;
+    }
+    #leeds-knights p {
+        font-size: 1rem;
+    }
+    
+    .main-grid {
+        grid-template-columns: 1fr 1fr; /* Two columns for medium screens */
+        padding-left: 8vw;
+        padding-right: 8vw;
+        gap: 1.5rem;
+    }
+    
+    .main-item {
+        min-height: 220px;
+        /* font-size: 1rem; */
+        padding: 1.1rem;
+    }
+    
+    .main-item h1 {
+        font-size: 1rem;
+    }
+
+    .main-item p {
+        font-size: 1rem;
+    }
+    
+    .main-item h2 {
+        font-size: 1.2rem;
+    }
+}
