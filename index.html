@@ -1,230 +1,344 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kev Bland Photography</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <nav>
-      <div class="nav-left">
-        <a href="#"
-          >Kev Bland
-          <p>photography</p></a
-        >
-      </div>
+/*###################################################################*/
+/* Fonts and defaults */
 
-      <div class="nav-right">
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a href="#junior-knights">Junior Knights</a>
-          </li>
-          <!-- <li class="nav-item">
-            <a href="#leeds-roses">Leeds Roses</a>
-          </li> -->
-          <li class="nav-item">
-            <a href="#leeds-knights">Leeds Knights</a>
-          </li>
-          <li class="nav-item">
-            <a
-              href="https://www.instagram.com/kevblandphotography/"
-              target="_blank"
-              >Instagram</a
-            >
-          </li>
-        </ul>
-      </div>
-    </nav>
+/* Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-    <div class="hero"></div>
+/* Merriweather */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
-    <!-- ##################################################### -->
-    <!-- Junior Knights -->
-    <section id="junior-knights">
-      <a href="#"><h1>Leeds Junior Knights</h1></a>
-      <p>Leeds Junior Knights ice hockey U16Gs photos.</p>
-      <p>
-        Click on the tiles below to view photos. The link will open in a new
-        page where you will be prompted for the gallery password.
-      </p>
-    </section>
+/* this code helps see the outline of DIVs to see what's going on */
+div, section, nav, header, footer{
+  border: solid 1px red;
+  margin: 2px;
+}
 
-    <div class="card">
-      <div class="main-grid">
-        <a
-          href="https://kevbland.pixieset.com/241026deeside/"
-          target="_blank"
-          class="main-item-link"
-        >
-          <div class="main-item">
-            <h1>26-10-2024</h1>
-            <div class="main-item-line"></div>
-            <h2>Deeside</h2>
-            <p>away</p>
-          </div>
-        </a>
+/*###################################################################*/
+/* defaults and resets */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", serif;
+    text-decoration: none;
+}
 
-        <a
-          href="https://kevbland.pixieset.com/241103whitleybay/"
-          target="_blank"
-          class="main-item-link"
-        >
-          <div class="main-item">
-            <h1>03-11-2024</h1>
-            <div class="main-item-line"></div>
-            <h2>Whitley Bay</h2>
-            <p>away</p>
-          </div>
-        </a>
+html{
+    height: 100%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    background-color: #FFFFFF;
+    margin: 0;
+}
 
-        <a
-          href="https://kevbland.pixieset.com/250105whitleybay/"
-          target="_blank"
-          class="main-item-link"
-        >
-          <div class="main-item">
-            <h1>05-01-2024</h1>
-            <div class="main-item-line"></div>
-            <h2>Whitley Bay</h2>
-            <p>home</p>
-          </div>
-        </a>
+ body{
+  position: relative;
+  margin: 0;
+  min-height: 100%;
+ }
 
-        <a
-          href="https://kevbland.pixieset.com/250111hull/"
-          target="_blank"
-          class="main-item-link"
-        >
-          <div class="main-item">
-            <h1>11-01-2024</h1>
-            <div class="main-item-line"></div>
-            <h2>Hull</h2>
-            <p>away</p>
-          </div>
-        </a>
+/*###################################################################*/
+/* nav */
 
-        <a
-          href="https://kevbland.pixieset.com/250201sheffield/"
-          target="_blank"
-          class="main-item-link"
-        >
-          <div class="main-item">
-            <h1>01-02-2025</h1>
-            <div class="main-item-line"></div>
-            <h2>Sheffield</h2>
-            <p>away</p>
-          </div>
-        </a>
-      </div>
-    </div>
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    padding-left: 8dvw;
+    padding-right: 8dvw;
+}
 
-    <!-- <div class="section-line"></div> -->
-    <!-- ##################################################### -->
-    <!-- Leeds Roses -->
-    <!-- <section id="leeds-roses">
-      <a href="#"><h1>Leeds Roses</h1></a>
-      <p>Leeds Roses ice hockey photos.</p>
-      <p>
-        Click on the tiles below to view photos. The link will open in a new
-        page where you will be prompted for the gallery password.
-      </p>
-    </section>
+.nav-left{
+    /* display: flex; */
+    width: 45%;
+    align-items: flex-start; /* moves the text to the top of the div */
+}
 
-    <div class="card">
-      <div class="main-grid">
-        <a href="#" target="_blank" class="main-item-link">
-          <div class="main-item">
-            <h1>Leeds Roses</h1>
-            <div class="main-item-line"></div>
-            <h2>Game details</h2>
-            <p>home or away</p>
-          </div>
-        </a>
+.nav-right{
+    display: flex;
+    justify-content: flex-end; /* this right aligns the text */
+    width:55%;
+    font-size: 1rem;
+    margin-left: auto;
+    align-items: flex-start; /* moves the text to the top of the div */
+}
 
-        <a href="#" target="_blank" class="main-item-link">
-          <div class="main-item">
-            <h1>Leeds Roses</h1>
-            <div class="main-item-line"></div>
-            <h2>Game details</h2>
-            <p>home or away</p>
-          </div>
-        </a>
+.nav-left a{
+    list-style: none;
+    text-decoration: none;
+    color: #000000;
+    /* transition: all 200ms ease-in; */
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: "Merriweather", serif;
+}
 
-        <a href="#" target="_blank" class="main-item-link">
-          <div class="main-item">
-            <h1>Leeds Roses</h1>
-            <div class="main-item-line"></div>
-            <h2>Game details</h2>
-            <p>home or away</p>
-          </div>
-        </a>
+.nav-left p{
+    list-style: none;
+    text-decoration: none;
+    color: #545454;
+    font-size: 1.2rem;
+    font-weight: 300;
+    font-family: "Merriweather", serif;
+    /* padding-left: 8px; */
+}
 
-        <a href="#" target="_blank" class="main-item-link">
-          <div class="main-item">
-            <h1>Leeds Roses</h1>
-            <div class="main-item-line"></div>
-            <h2>Game details</h2>
-            <p>home or away</p>
-          </div>
-        </a>
-      </div>
-    </div> -->
+.nav-list {
+    display: flex;
+    gap: 1.2rem;
+  }
 
-    <div class="section-line"></div>
-    <!-- ##################################################### -->
-    <!-- Leeds Knights -->
-    <section id="leeds-knights">
-      <a href="#"><h1>Leeds Knights</h1></a>
-      <p>Leeds Knights ice hockey photos.</p>
-      <p>
-        Click on the tiles below to view photos - the link will open in a new
-        page.
-      </p>
-    </section>
+.nav-item {
+    list-style: none;
+    margin-right: 2rem;
+}
 
-    <div class="card">
-      <div class="main-grid">
-        <a
-          href="https://kevbland.pixieset.com/knightswildcats250202/"
-          target="_blank"
-          class="main-item-link"
-        >
-          <div class="main-item">
-            <h1>02-02-2025</h1>
-            <div class="main-item-line"></div>
-            <h2>Swindon Wildcats</h2>
-            <p>home</p>
-          </div>
-        </a>
+.nav-item a {
+    text-decoration: none;
+    font-weight: 400;
+    color: #141414;
+    /* make the link look like a button */
+    /* padding-left: 1.4rem;
+    padding-right: 1.4rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    background-color: #14213d;
+    border: 1px solid #14213d;
+    border-radius: 2rem; */
+    /* transition: all 200ms ease-in; */
+}
 
-        <!-- <a href="#" target="_blank" class="main-item-link">
-          <div class="main-item">
-            <h1>Leeds Knights</h1>
-            <div class="main-item-line"></div>
-            <h2>Game details</h2>
-            <p>home or away</p>
-          </div>
-        </a>
+.nav-item a:hover{
+    padding-bottom: 2px;
+    border-bottom: 3px solid #545454;
+    color: #545454;
+}
 
-        <a href="#" target="_blank" class="main-item-link">
-          <div class="main-item">
-            <h1>Leeds Knights</h1>
-            <div class="main-item-line"></div>
-            <h2>Game details</h2>
-            <p>home or away</p>
-          </div>
-        </a>
+/*###################################################################*/
+/* hero */
+.hero{
+    position: relative;
+    background-image: url(img/image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100dvh;
+}
 
-        <a href="#" target="_blank" class="main-item-link">
-          <div class="main-item">
-            <h1>Leeds Knights</h1>
-            <div class="main-item-line"></div>
-            <h2>Game details</h2>
-            <p>home or away</p>
-          </div>
-        </a> -->
-      </div>
-    </div>
-  </body>
-</html>
+/*###################################################################*/
+/* junior-knights */
+#junior-knights{
+    padding-left: 8dvw;
+    padding-right: 8dvw;
+    padding-bottom: 1rem;
+    padding-top: 5dvh;
+}
+
+#junior-knights h1{
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
+}
+
+#junior-knights p{
+    font-size: 1rem;
+    padding-bottom: 1rem; 
+    color: #545454; 
+}
+
+#junior-knights a{
+    color:inherit;
+}
+
+/*###################################################################*/
+/* leeds-roses */
+#leeds-roses{
+    padding-left: 8dvw;
+    padding-right: 8dvw;
+    padding-bottom: 1rem;
+    padding-top: 5dvh;
+}
+
+#leeds-roses h1{
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
+}
+
+#leeds-roses p{
+    font-size: 1rem;
+    padding-bottom: 1rem;
+    color: #545454;
+}
+
+#leeds-roses a{
+    color:inherit;
+}
+
+/*###################################################################*/
+/* leeds-knights */
+#leeds-knights{
+    padding-left: 8dvw;
+    padding-right: 8dvw;
+    padding-bottom: 1rem;
+    padding-top: 5dvh;
+}
+
+#leeds-knights h1{
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
+}
+
+#leeds-knights p{
+    font-size: 1rem;
+    padding-bottom: 1rem;
+    color: #545454;
+}
+
+#leeds-knights a{
+    color:inherit;
+}
+
+/*###################################################################*/
+/* Line divider between sections */
+.section-line{
+    padding-left: 8dvw;
+    padding-right: 8dvw;
+    margin: 0 auto;
+    border: 1px solid #E5E5E5;
+    margin-bottom: 1rem;
+  }
+
+/*###################################################################*/
+/* grid-main */
+.main-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: minmax(300px, auto); /* Rows will be at least 300px in height, but expand if content overflows */
+    gap: 2rem;
+    padding-left: 8dvw;
+    padding-right: 8dvw;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+}
+
+/* Styling for the link wrapping each card */
+.main-item-link {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Maintain text color */
+  display: block; /* Ensure the link spans the full card */
+}
+
+/* Styling for the individual cards */
+.main-item {
+  min-height: 250px;
+  border-radius: 0.8rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  padding: 1.2rem;
+  font-size: 1rem; 
+  cursor: pointer;
+}
+
+.main-item:hover{
+  background-color: #14213d;
+}
+
+.main-item h1{
+    font-size: 1rem;
+    padding-bottom: 0.4rem;
+    font-weight: 300;
+    color: #545454;
+  }
+
+.main-item:hover h1{
+  color: #FFFFFF;
+}
+
+.main-item:hover p{
+    color: #FFFFFF;
+  }
+
+.main-item h2{
+    font-size: 1.8rem;
+    font-weight: 600;
+    /* padding-bottom: 2rem; */
+    color: #141414;
+  }
+
+.main-item p{
+    font-size: 0.8rem;
+    padding-bottom: 0.4rem;
+    font-weight: 300;
+    color: #545454;
+}
+
+.main-item:hover h2{
+  color: #FCA311;
+}
+
+.main-item-line{
+  /* width: 100%; */
+  border: 1px solid #E5E5E5;
+  margin-bottom: 3rem;
+}
+
+/*###################################################################*/
+/* Media queries for responsiveness */
+/* Smartphone (up to 767px) */
+@media (max-width: 767px) {
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .nav-left{
+        text-align: center;
+    }
+
+    .nav-right {
+        padding-top: 10px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .nav-right ul {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .main-grid {
+      grid-template-columns: 1fr; /* Stack grid items on smaller screens */
+    }
+  
+    .hero {
+      height: 200px; /* Reduce hero section height */
+    }
+  
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    h2 {
+      font-size: 1.2rem;
+    }
+  
+    p {
+      font-size: 0.9rem;
+    }
+  }
+
+  /* Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+    .nav-right ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .main-grid {
+      grid-template-columns: repeat(2, 1fr); /* Adjust grid for tablets */
+    }
+  }
