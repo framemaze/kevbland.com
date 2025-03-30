@@ -1,11 +1,15 @@
 /*###################################################################*/
 /* Fonts and defaults */
 
+/* Noto Sans */
+/* Default font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 /* Noto Serif */
+/* Font for most headings */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* Noto Sans */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* this code helps see the outline of DIVs to see what's going on */
 /* div, section, nav, header, footer{
@@ -16,7 +20,6 @@
 /*###################################################################
 Actions:
 ~ make instagram link a button
-~ update PPTX design file
 */
 
 /*###################################################################*/
@@ -133,7 +136,7 @@ nav {
     font-size: 1.8rem;
     font-weight: 600;
     padding-bottom: 1rem;
-    font-family: "Noto Serif", serif;
+    /* font-family: "Noto Serif", serif; */
 }
 
 #junior-knights p {
@@ -159,7 +162,7 @@ nav {
     font-size: 1.8rem;
     font-weight: 600;
     padding-bottom: 1rem;
-    font-family: "Noto Serif", serif;
+    /* font-family: "Noto Serif", serif; */
 }
 
 #leeds-knights p {
@@ -185,7 +188,7 @@ nav {
     font-size: 1.8rem;
     font-weight: 600;
     padding-bottom: 1rem;
-    font-family: "Noto Serif", serif;
+    /* font-family: "Noto Serif", serif; */
 }
 
 #leeds-knights2 p {
@@ -250,10 +253,10 @@ nav {
 
 /* opponent */
 .main-item h2 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 600;
     color: #141414;
-    font-family: "Noto Serif", serif;
+    /* font-family: "Noto Serif", serif; */
 }
 
 /* home or away */
