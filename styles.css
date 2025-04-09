@@ -1,13 +1,25 @@
 /*###################################################################*/
-/* Fonts and defaults */
+/* Actions:
 
-/* Noto Sans */
-/* Default font */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+~ Arrange CSS code to that it is easier to debug and change - it's all over the place at the minute!
+~ Add an icon to each section header to make it more visually appealing
+~ Agree on a colour scheme and apply across the whole site
+~ Instagram button in mobile view needs to have same formatting as links
+~ iPad view needs to be a grid of 2 not 4
+~ Sense check media queries too
+~ Make fixture images using aspect ratio of 3:2 in photoshop (find a naming convention that works too!)
+~ Replace HERO image - I want a white site
+~ Make fioxture images clicabler to the link and remove the gallery button
+~ For the above (clicakble images), I want a hover effect tjat shows the text
 
-/* Noto Serif */
-/* Font for most headings */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
+*/
+/*###################################################################*/
+
+/*###################################################################*/
+/* fonts */
+
+/* source sans */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
 /* this code helps see the outline of DIVs to see what's going on */
 /* div, section, nav, header, footer{
@@ -15,89 +27,135 @@
   margin: 2px;
 } */
 
-/*###################################################################
-Actions:
-~ make instagram link a button
-*/
 
 /*###################################################################*/
 /* defaults and resets */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Noto Sans", serif;
-  text-decoration: none;
 }
 
 html {
-  height: 100%;
-  box-sizing: border-box;
   scroll-behavior: smooth;
-  background-color: #ffffff;
-  margin: 0;
-  font-size: 16px;
 }
 
 body {
-  position: relative;
-  margin: 0;
-  min-height: 100%;
+  font-family: "Source Sans 3", sans-serif;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
 }
 
 /*###################################################################*/
-/* intro section */
-.intro {
-  padding-top: 1dvh;
-  padding-bottom: 2dvh;
-  text-align: center;
-}
-
-.intro h1 {
-  color: #141414;
-  font-size: 3.4rem;
-  font-weight: 800;
-  font-family: "Noto Serif", serif;
-}
-
-.intro h2 {
-  color: #545454;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-/*###################################################################*/
-/* nav */
-nav {
-  display: flex;
-  justify-content: center;
-  padding-top: 2rem;
-  padding-bottom: 1rem;
+/* navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   padding-left: 10dvw;
   padding-right: 10dvw;
-}
-
-.nav-list {
   display: flex;
-  gap: 2rem;
-  padding-bottom: 2dvh;
+  /* this is the height of the navbar */
+  height: 5rem;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+  }
+
+/* section styling */
+section {
+  /* this needs to match the height of the navbar to ensure no overlap */
+  scroll-margin-top: 5rem;
 }
 
-.nav-item {
-  list-style: none;
+/* this is the text logo */
+.navbar .logo {
+  font-size: 1.2rem;
 }
 
-.nav-item a {
-  text-decoration: none;
+/* logo-link styling */
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: black;
+}
+
+/* code to add a block around KEV BLAND */
+.logo-block {
+  font-size: 1.2rem;
+  background-color: white;
+  color: #111;
+  padding: 0.2rem 0.5rem;
+  font-weight: 700;
+}
+
+.logo-text {
+  font-size: 1.2rem;
+  color: #555555;
   font-weight: 400;
-  color: #141414;
-  font-size: 1.4rem;
 }
 
-.nav-item a:hover {
-  padding-bottom: 2px;
-  border-bottom: 3px solid #003566;
-  color: #003566;
+/* nav-links */
+.nav-links {
+  font-size: 1.2rem;
+  list-style: none;
+  display: flex;
+  gap: 1.4rem;
+}
+
+.nav-links a {
+  color: #111111;
+  text-decoration: none;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+/* this makes sure the hover effect is not applied to the button */
+.nav-links a:not(.insta-btn):hover {
+  border-bottom: 2px solid #F6BA03;
+}
+
+.insta-icon-link {
+  display: flex;
+  align-items: center;
+  color: #111;
+  transition: transform 0.2s ease;
+}
+
+.insta-icon-link:hover {
+  transform: scale(1.1);
+}
+
+.insta-icon {
+  width: 24px;
+  height: 24px;
+  filter: invert(0); /* default black icon */
+}
+
+/* Optional: change colour on hover */
+.insta-icon-link:hover .insta-icon {
+  filter: brightness(0) saturate(100%) invert(56%) sepia(91%) saturate(592%) hue-rotate(356deg) brightness(104%) contrast(101%);
+}
+
+
+/*###################################################################*/
+/* hero image */
+.hero-image {
+  height: 100vh;
+  background: url(img/image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /*###################################################################*/
@@ -105,370 +163,241 @@ nav {
 .line {
   width: 100%;
   margin: 0 auto;
-  border: 1px solid #e5e5e5;
-  margin-bottom: 1rem;
+  border-bottom: 1px solid #d7d7d7;
 }
 
 /*###################################################################*/
-/* hero */
-.hero {
-  position: relative;
-  background-image: url(img/image.jpg);
-  background-size: cover;
+/* fixture cards styling */
+
+.fixture-card {
+  cursor: pointer;
+  border: 1px solid lightgray;
+  padding: 0.5rem;
+}
+
+.fixture-card:hover {
+  transition: all 0.3s ease;
+  transform: scale(0.99);
+}
+
+.fixture-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   background-repeat: no-repeat;
   background-position: center;
+  position: relative;
+}
+
+.fixture-text {
+  text-align: center;
+  padding-left: 1rem;
   width: 100%;
-  height: 80dvh;
+  height: 35%;
+}
+
+.fixture-text h1 {
+  padding-top: 0.5rem;
+  font-size: 1.4rem;
+  color: black;
+  font-weight: 500;
+}
+
+.fixture-text h3 {
+  font-size: 1rem;
+  color: grey;
+  font-weight: 400;
 }
 
 /*###################################################################*/
-/* junior-knights */
-#junior-knights {
-  padding-left: 10dvw;
-  padding-right: 10dvw;
-  padding-bottom: 1rem;
-  padding-top: 3rem;
-}
-
-#junior-knights h1 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  padding-bottom: 1rem;
-  /* font-family: "Noto Serif", serif; */
-}
-
-#junior-knights p {
-  font-size: 1.2rem;
-  padding-bottom: 1rem;
-  color: #545454;
-}
-
-#junior-knights a {
-  color: inherit;
-}
-
-/*###################################################################*/
-/* leeds-knights */
-#leeds-knights {
-  padding-left: 10dvw;
-  padding-right: 10dvw;
-  padding-bottom: 1rem;
-  padding-top: 1rem;
-}
-
-#leeds-knights h1 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  padding-bottom: 1rem;
-  /* font-family: "Noto Serif", serif; */
-}
-
-#leeds-knights p {
-  font-size: 1.2rem;
-  padding-bottom: 1rem;
-  color: #545454;
-}
-
-#leeds-knights a {
-  color: inherit;
-}
-
-/*###################################################################*/
-/* leeds-knights2 */
-#leeds-knights2 {
-  padding-left: 10dvw;
-  padding-right: 10dvw;
-  padding-bottom: 1rem;
-  padding-top: 1rem;
-}
-
-#leeds-knights2 h1 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  padding-bottom: 1rem;
-  /* font-family: "Noto Serif", serif; */
-}
-
-#leeds-knights2 p {
-  font-size: 1.2rem;
-  padding-bottom: 1rem;
-  color: #545454;
-}
-
-#leeds-knights2 a {
-  color: inherit;
-}
-
-/*###################################################################*/
-/* Line divider between sections */
-.section-line {
-  width: 80%;
-  margin: 0 auto;
-  border: 1px solid #e5e5e5;
-  margin-bottom: 1rem;
-}
-
-/*###################################################################*/
-/* grid-main */
-.main-grid {
+/* sections */
+.junior-knights-grid,
+.leeds-knights-grid,
+.leeds-knights2-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-auto-rows: minmax(
-    300px,
-    auto
-  ); /* Rows will be at least 300px in height, but expand if content overflows */
-  gap: 2rem;
-  padding-left: 10dvw;
-  padding-right: 10dvw;
-  padding-bottom: 1rem;
-  padding-top: 1rem;
-}
-
-/* Styling for the link wrapping each card */
-.main-item-link {
-  text-decoration: none; /* Remove underline */
-  color: inherit; /* Maintain text color */
-  display: block; /* Ensure the link spans the full card */
-}
-
-/* Styling for the individual cards */
-.main-item {
-  min-height: 250px;
-  border-radius: 0.8rem;
-  /* border: 1px solid #DADADA; */
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-  padding: 1rem;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-/* ############################################################## */
-/* card styling */
-/* date */
-.main-item h1 {
-  font-size: 1rem;
-  padding-bottom: 0.4rem;
-  font-weight: 300;
-  color: #545454;
-}
-
-/* opponent */
-.main-item h2 {
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: #141414;
-  /* font-family: "Noto Serif", serif; */
-}
-
-/* home or away */
-.main-item p {
-  font-size: 1rem;
-  padding-bottom: 0.4rem;
-  font-weight: 300;
-  color: #545454;
-}
-
-/* cards hover effect */
-.main-item:hover {
-  /* background-color: #F5F5F5; */
-  transition: 0.2s ease;
-  scale: 0.98;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: minmax(200px, auto); /* Rows will be at least 200px in height, but expand if content overflows */
+  gap: 1.4rem;
 }
 
 /*###################################################################*/
-/* main-item line */
-.main-item-line {
-  border: 1px solid #e5e5e5;
-  margin-bottom: 3rem;
+/* Hamburger styles */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: black;
+}
+
+/*###################################################################*/
+/* sections */
+
+#junior-knights {
+  /* background-color: #E3F2FD; */
+  /* height: 80dvh; */
+  padding-left: 10dvw;
+  padding-right: 10dvw;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+#leeds-knights {
+  /* background-color: #BBDEFB; */
+  /* height: 80dvh; */
+  padding-left: 10dvw;
+  padding-right: 10dvw;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+#leeds-knights2 {
+  /* background-color: #90CAF9; */
+  /* height: 80dvh; */
+  padding-left: 10dvw;
+  padding-right: 10dvw;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+#junior-knights,
+#leeds-knights,
+#leeds-knights2, h2 {
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
+}
+
+#junior-knights,
+#leeds-knights,
+#leeds-knights2, p {
+  font-weight: 400;
+  font-size: 1rem;
+  padding-bottom: 1rem;
 }
 
 /*###################################################################*/
 /* footer */
-
-footer p {
+.footer {
+  background-color: #ededed;
+  color: #888888;
   text-align: center;
-  font-size: 1rem;
-  color: #bebebe;
-  padding-top: 1rem;
-  padding-bottom: 2rem;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer .insta-icon img {
+  width: 24px;
+  height: 24px;
+  filter: invert(0.7); /* makes icon light grey */
+  transition: filter 0.3s ease;
 }
 
 /*###################################################################*/
-/* Media queries for responsiveness */
-/* Smartphone (up to 760px) */
-@media (max-width: 760px) {
-  /* intro queries */
-  .intro h1 {
-    font-size: 1.6rem;
+/* media queries */
+
+/* mobile and small screens */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    margin-left: auto;
   }
 
-  .intro h2 {
-    font-size: 1rem;
-  }
-
-  .line {
-    margin-bottom: 0.2rem;
-  }
-
-  /* nav bar media queries */
-  nav {
-    padding-top: 1rem;
-  }
-
-  .nav-item a {
-    font-size: 1rem;
-  }
-
-  .nav-list {
+  .nav-links {
+    display: none;
     flex-direction: column;
-    align-items: center;
-    gap: 0.6rem;
-    padding-bottom: 4px;
+    width: 100%;
+    background-color: white;
+    margin-top: 1rem;
+    padding: 1rem;
+    position: absolute;
+    top: 5rem;
+    left: 0;
   }
 
-  /* hero image */
-  .hero {
-    padding-top: 3vh;
-    height: 200px; /* Reduce hero section height */
+  .nav-links.show {
+    display: flex;
   }
 
-  /* fixture card main container */
-  .card {
+  .nav-links a {
+    padding: 0.75rem 0;
+    font-size: 1rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
     height: auto;
   }
 
-  /* section fonts */
-  #junior-knights h1 {
-    font-size: 1.2rem;
-  }
-
-  #junior-knights p {
+  .logo-link {
     font-size: 1rem;
+    flex-wrap: wrap;
   }
 
-  #leeds-knights h1 {
-    font-size: 1.2rem;
+  .hero-image {
+    background-position: top;
+    height: 60vh;
   }
 
-  #leeds-knights p {
-    font-size: 1rem;
+  section {
+    padding: 2rem 5vw;
   }
 
-  #leeds-knights2 h1 {
-    font-size: 1.2rem;
+  h2 {
+    font-size: 1.5rem;
   }
 
-  #leeds-knights2 p {
-    font-size: 1rem;
+  p {
+    font-size: 0.95rem;
+    line-height: 1.6;
   }
 
-  /* main-grid */
-  .main-grid {
-    grid-template-columns: 1fr; /* Single column for smaller screens */
-    padding-left: 5vw;
-    padding-right: 5vw;
-    grid-auto-rows: minmax(
-      150px,
-      auto
-    ); /* Rows will be at least 150px in height, but expand if content overflows */
+  .junior-knights-grid,
+  .leeds-knights-grid,
+  .leeds-knights2-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(200px, auto); /* Rows will be at least 200px in height, but expand if content overflows */
     gap: 2rem;
   }
 
-  /* fixture card */
-  .main-item {
-    min-height: 200px;
-    /* font-size: 0.9rem; */
-    padding: 1rem;
-  }
-
-  /* card: date of the game */
-  .main-item h1 {
-    font-size: 0.9rem;
-  }
-
-  /* card: opponent */
-  .main-item h2 {
-    font-size: 1.4rem;
-  }
-
-  /* card: home or away */
-  .main-item p {
-    font-size: 0.9rem;
+  /* instagram button styling */
+  .nav-links .insta-btn {
+    border-radius: 0;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
   }
 }
 
-/* tablet */
-@media (min-width: 761px) and (max-width: 1300px) {
-  /* intro queries */
-  .intro h1 {
-    font-size: 2rem;
-  }
+/* tablet & small desktop */
+@media (min-width: 769px) and (max-width: 1200px) {
 
-  .intro h2 {
-    font-size: 1.4rem;
-  }
-
-  .line {
-    margin-bottom: 0.2rem;
-  }
-
-  .hero {
-    padding-top: 4vh;
-  }
-
-  .nav-item a {
-    font-size: 1rem;
-  }
-
-  #junior-knights h1 {
-    font-size: 1.4rem;
-  }
-
-  #junior-knights p {
-    font-size: 1.1rem;
-  }
-
-  #leeds-knights h1 {
-    font-size: 1.4rem;
-  }
-  #leeds-knights p {
-    font-size: 1rem;
-  }
-
-  #leeds-knights2 h1 {
-    font-size: 1.4rem;
-  }
-  #leeds-knights2 p {
-    font-size: 1rem;
-  }
-
-  .main-grid {
-    grid-template-columns: 1fr 1fr 1fr; /* Three columns for medium screens */
-    padding-left: 8vw;
-    padding-right: 8vw;
-    gap: 1.5rem;
-  }
-
-  /* ######################################## */
-  /* main-item */
-  .main-item {
-    min-height: 220px;
-    /* font-size: 1rem; */
-    padding: 1.1rem;
-  }
-
-  /* card: date of the game */
-  .main-item h1 {
-    font-size: 1.1rem;
-  }
-
-  /* card: opponent */
-  .mmain-item h2 {
-    font-size: 1.4rem;
-  }
-
-  /* card: home or away */
-  .main-item p {
-    font-size: 1.1rem;
+  .junior-knights-grid,
+  .leeds-knights-grid,
+  .leeds-knights2-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(200px, auto); /* Rows will be at least 200px in height, but expand if content overflows */
+    gap: 2rem;
   }
 }
+
+/* For larger devices */
+@media (min-width: 1400px) {
+  .junior-knights-grid,
+  .leeds-knights-grid,
+  .leeds-knights2-grid {
+    gap: 2.5rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  section {
+    padding-left: 15dvw;
+    padding-right: 15dvw;
+  }
+}
+
