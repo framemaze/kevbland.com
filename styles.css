@@ -1,21 +1,4 @@
 /*###################################################################*/
-/* Actions:
-
-~ Arrange CSS code to that it is easier to debug and change - it's all over the place at the minute!
-~ Add an icon to each section header to make it more visually appealing
-~ Agree on a colour scheme and apply across the whole site
-~ Instagram button in mobile view needs to have same formatting as links
-~ iPad view needs to be a grid of 2 not 4
-~ Sense check media queries too
-~ Make fixture images using aspect ratio of 3:2 in photoshop (find a naming convention that works too!)
-~ Replace HERO image - I want a white site
-~ Make fioxture images clicabler to the link and remove the gallery button
-~ For the above (clicakble images), I want a hover effect tjat shows the text
-
-*/
-/*###################################################################*/
-
-/*###################################################################*/
 /* fonts */
 
 /* source sans */
@@ -26,7 +9,6 @@
   border: solid 1px red;
   margin: 2px;
 } */
-
 
 /*###################################################################*/
 /* defaults and resets */
@@ -55,7 +37,7 @@ a {
   position: fixed;
   top: 0;
   width: 100%;
-  background: white;
+  background: #FFFFFF;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   padding-left: 10dvw;
   padding-right: 10dvw;
@@ -82,25 +64,25 @@ section {
 .logo-link {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.4rem;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
-  color: black;
+  color: #131B23;
 }
 
 /* code to add a block around KEV BLAND */
 .logo-block {
   font-size: 1.2rem;
-  background-color: white;
-  color: #111;
+  background-color: #8833DE;
+  color: #FFFFFF;
   padding: 0.2rem 0.5rem;
   font-weight: 700;
 }
 
 .logo-text {
   font-size: 1.2rem;
-  color: #555555;
+  color: #131B23;
   font-weight: 400;
 }
 
@@ -113,7 +95,7 @@ section {
 }
 
 .nav-links a {
-  color: #111111;
+  color: #131B23;
   text-decoration: none;
   padding-bottom: 0.25rem;
   border-bottom: 2px solid transparent;
@@ -122,13 +104,13 @@ section {
 
 /* this makes sure the hover effect is not applied to the button */
 .nav-links a:not(.insta-btn):hover {
-  border-bottom: 2px solid #F6BA03;
+  border-bottom: 2px solid #8833DE;
 }
 
 .insta-icon-link {
   display: flex;
   align-items: center;
-  color: #111;
+  color: #131B23;
   transition: transform 0.2s ease;
 }
 
@@ -143,9 +125,9 @@ section {
 }
 
 /* Optional: change colour on hover */
-.insta-icon-link:hover .insta-icon {
+/* .insta-icon-link:hover .insta-icon {
   filter: brightness(0) saturate(100%) invert(56%) sepia(91%) saturate(592%) hue-rotate(356deg) brightness(104%) contrast(101%);
-}
+} */
 
 
 /*###################################################################*/
@@ -165,7 +147,7 @@ section {
 .line {
   width: 100%;
   margin: 0 auto;
-  border-bottom: 1px solid #d7d7d7;
+  border-bottom: 1px solid #E4E4E4;
 }
 
 /*###################################################################*/
@@ -173,7 +155,7 @@ section {
 
 .fixture-card {
   cursor: pointer;
-  border: 1px solid lightgray;
+  border: 1px solid #E4E4E4;
   padding: 0.5rem;
 }
 
@@ -201,13 +183,13 @@ section {
 .fixture-text h1 {
   padding-top: 0.5rem;
   font-size: 1.4rem;
-  color: black;
+  color: #131B23;
   font-weight: 500;
 }
 
 .fixture-text h3 {
   font-size: 1rem;
-  color: grey;
+  color: #CDCBCB;
   font-weight: 400;
 }
 
@@ -226,16 +208,12 @@ section {
 /* sections */
 
 #junior-knights {
-  /* background-color: #E3F2FD; */
-  /* height: 80dvh; */
   padding-left: 10dvw;
   padding-right: 10dvw;
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
 #leeds-knights {
-  /* background-color: #BBDEFB; */
-  /* height: 80dvh; */
   padding-left: 10dvw;
   padding-right: 10dvw;
   padding-top: 2rem;
@@ -243,8 +221,6 @@ section {
 }
 
 #leeds-knights2 {
-  /* background-color: #90CAF9; */
-  /* height: 80dvh; */
   padding-left: 10dvw;
   padding-right: 10dvw;
   padding-top: 2rem;
@@ -270,8 +246,7 @@ section {
 /*###################################################################*/
 /* footer */
 .footer {
-  background-color: #ededed;
-  color: #888888;
+  color: #CDCBCB;
   text-align: center;
   padding: 2rem 1rem;
   font-size: 0.9rem;
@@ -358,7 +333,7 @@ section {
   .nav-links a {
     padding: 0.75rem 0;
     font-size: 1rem;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #E4E4E4;
   } 
 }
 
